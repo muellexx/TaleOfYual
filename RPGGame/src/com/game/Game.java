@@ -85,7 +85,7 @@ public class Game extends JFrame implements Runnable {
 		
 		super("Alex' first RPG Game");
 		
-		AudioPlayer.load();
+		//AudioPlayer.load();
 		
 		//Make the program shut down when we exit out
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
