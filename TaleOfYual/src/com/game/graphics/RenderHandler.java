@@ -168,8 +168,8 @@ public class RenderHandler {
 	public void fadeImage(Graphics graphics) {
 		if(fade == 1 || fade == 2) {
 			rescale = new RescaleOp(1.0f,fadeOffset, null);
-			BufferedImage fadeView=rescale.filter(view,null);//(sourse,destination)
-			graphics.drawImage(fadeView.getSubimage(0, 0, camera.w, camera.h), 0, 0, camera.w, camera.h, null);
+			BufferedImage fadeView=rescale.filter(view,null); //(source,destination)
+			graphics.drawImage(fadeView.getSubimage(0, 0, camera.w, camera.h), 0, 0, screen.w, screen.h, null);
 			count++;
 			fadeOffset += fadeSpeed;
 			if (fadeOffset >= 256f || fadeOffset <= -256f) {
@@ -186,7 +186,7 @@ public class RenderHandler {
 		}else if(fade == 3) {
 			rescale = new RescaleOp(1.0f,fadeOffset, null);
 			BufferedImage fadeView=rescale.filter(view,null);//(sourse,destination)
-			graphics.drawImage(fadeView.getSubimage(0, 0, camera.w, camera.h), 0, 0, camera.w, camera.h, null);
+			graphics.drawImage(fadeView.getSubimage(0, 0, camera.w, camera.h), 0, 0, screen.w, screen.h, null);
 			count++;
 			fadeOffset -= fadeSpeed;
 			if ((fadeSpeed <=0 && fadeOffset >= 0)||(fadeSpeed >= 0 && fadeOffset <= 0)) {
