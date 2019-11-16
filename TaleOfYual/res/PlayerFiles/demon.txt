@@ -1,0 +1,8 @@
+//Player-Demon
+spriteImage:/Sprites/Glenys-the-Demonswordsman.png
+xZoom:1
+yZoom:1
+spriteWidth:24
+spriteHeight:24
+spriteNumber:3
+collisionRectangle:5,9,13,11

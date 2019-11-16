@@ -1,0 +1,8 @@
+//Player-Wizard
+spriteImage:/Sprites/Player.png
+xZoom:1
+yZoom:1
+spriteWidth:20
+spriteHeight:26
+spriteNumber:8
+collisionRectangle:2,13,16,12
