@@ -172,7 +172,7 @@ public class Game extends JFrame implements Runnable {
 		
 		Actions actions = new Actions(this);
 		
-		AudioPlayer.getMusic("music").loop(1, 0.05f);
+		//AudioPlayer.getMusic("music").loop(1, 0.05f);
 	}
 	
 	public void startGame() {
