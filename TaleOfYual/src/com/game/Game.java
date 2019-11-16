@@ -178,13 +178,14 @@ public class Game extends JFrame implements Runnable {
 	public void startGame() {
 		//gameLoaded = false;
 		//Load Objects
-		int xSpawn = 480;
+		int xSpawn = 400;
 		int ySpawn = 480;
 		if(gameLoaded == true) {
 			this.setMap(startMap, startTiles, startSprite, xSpawn, ySpawn);
 			loadMap();
 			player.reset();
 		}else {
+			objects.clear();
 			player = new Player(new File("res/PlayerFiles/wizard.txt"), xSpawn, ySpawn, this);
 			objects.add(player);
 			enemy1 = new Enemy1(new File("res/PlayerFiles/demon.txt"), 300, 300, this);
@@ -482,9 +483,10 @@ public class Game extends JFrame implements Runnable {
 	public void gameOver() {
 		setJMenuBar(null);
 		setVisible(true);
-		objects.clear();
 		player = null;
 		enemy1 = null;
+		objects.clear();
+		enemys.clear();
 		gameLoaded = false;
 		gameState = STATE.GameOver;
 		Menu = new GameOverMenu(this, renderer);
